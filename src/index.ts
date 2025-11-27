@@ -1,3 +1,4 @@
 import "./style.scss";
+import { app } from "./app";
 
-console.log("F");
+app();

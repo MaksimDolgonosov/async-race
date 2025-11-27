@@ -12,6 +12,8 @@
 
 body {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .app {
@@ -34,11 +36,17 @@ body {
     button {
       width: 100%;
       height: 100%;
-      background-color: rgb(113, 165, 34);
+      background-color: rgb(131, 192, 39);
       color: black;
       text-transform: uppercase;
       font-size: 14px;
       cursor: pointer;
     }
   }
+}
+
+.garage_page,
+.winners_page {
+  padding-top: 40px;
+  color: white;
 }
