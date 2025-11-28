@@ -14,7 +14,21 @@
         <button class="nav_item winners_btn">To winners</button>
       </nav>
       <section class="garage_page" style="display: block">
-        <form></form>
+        <form class="create_form" id="create_form">
+          <input class="create_form_car" type="text" name="car-name" required />
+          <input type="color" />
+          <button>Create</button>
+        </form>
+        <form class="update_form" id="update_form">
+          <input class="update_form_car" type="text" name="car-name" required />
+          <input type="color" />
+          <button>Update</button>
+        </form>
+        <div class="control_btns">
+          <button id="race">Race</button>
+          <button id="raset">Reset</button>
+          <button id="generate">Generate cars</button>
+        </div>
       </section>
       <section class="winners_page" style="display: none">Winners page</section>
     </div>

@@ -33,20 +33,83 @@ body {
     width: 120px;
     height: 30px;
 
-    button {
-      width: 100%;
-      height: 100%;
-      background-color: rgb(131, 192, 39);
-      color: black;
-      text-transform: uppercase;
-      font-size: 14px;
-      cursor: pointer;
+    // button {
+    // width: 100%;
+    // height: 100%;
+    background-color: rgb(131, 192, 39);
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all;
+    font-weight: 600;
+    &:hover {
+      background-color: rgba(131, 192, 39, 0.897);
+      transition: 0.3s all;
     }
+    // }
   }
+}
+
+.control_btns {
+  display: flex;
 }
 
 .garage_page,
 .winners_page {
   padding-top: 40px;
   color: white;
+}
+
+.create_form,
+.update_form {
+  margin-top: 20px;
+  // display: block;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    display: block;
+    // background-color: #62b8da;
+  }
+  &_car {
+    height: 27px;
+    background-color: #f1fbff;
+  }
+  button {
+    display: block;
+    background-color: #62b8da;
+    height: 27px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: aliceblue;
+    width: 70px;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      background-color: #62b8dada;
+    }
+  }
+}
+
+.control_btns {
+  margin-top: 20px;
+  // display: block;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#race,
+#reset {
+  display: block;
+  width: 25%;
+}
+#generate {
+  width: 50%;
 }
