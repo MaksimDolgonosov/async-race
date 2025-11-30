@@ -1,0 +1,17 @@
+@mixin btn_blue {
+  display: block;
+  background-color: #62b8da;
+  height: 27px;
+  cursor: pointer;
+  // border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: aliceblue;
+  width: 70px;
+  transition: 0.3s all;
+
+  &:hover {
+    transition: 0.3s all;
+    background-color: #62b8dada;
+  }
+}

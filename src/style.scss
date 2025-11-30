@@ -1,5 +1,7 @@
-// @use "./styles/startPage.scss";
-// @use "./styles/loginPage.scss";
+@use "./styles/mixins";
+
+@use "./styles/carField";
+//  @use "./styles/loginPage.scss";
 // @use "./styles/gamePage.scss";
 // @use "./styles/modal.scss";
 
@@ -59,7 +61,7 @@ body {
 
 .garage_page,
 .winners_page {
-  padding-top: 40px;
+  // padding-top: 20px;
   color: white;
 }
 
@@ -84,12 +86,13 @@ body {
     background-color: #62b8da;
     height: 27px;
     cursor: pointer;
-    border: none;
+    // border: none;
     border-radius: 3px;
     text-transform: uppercase;
     color: aliceblue;
     width: 70px;
     transition: 0.3s all;
+
     &:hover {
       transition: 0.3s all;
       background-color: #62b8dada;
@@ -108,8 +111,36 @@ body {
 #race,
 #reset {
   display: block;
-  width: 25%;
+  width: 23%;
+  background-color: rgb(131, 192, 39);
+  height: 27px;
+  transition: 0.3s all;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(131, 192, 39, 0.897);
+    transition: 0.3s all;
+  }
 }
 #generate {
-  width: 50%;
+  width: 47%;
+  height: 27px;
+  background-color: #62b8da;
+  transition: 0.3s all;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s all;
+    background-color: #62b8dada;
+  }
+}
+
+.garage_title {
+  margin-top: 40px;
+}
+.garage_page-number {
+  margin: 15px 0;
 }

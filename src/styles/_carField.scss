@@ -1,0 +1,63 @@
+@mixin btn_blue {
+  display: block;
+  background-color: #62b8da;
+  height: 27px;
+  cursor: pointer;
+  // border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: aliceblue;
+  width: 70px;
+  transition: 0.3s all;
+
+  &:hover {
+    transition: 0.3s all;
+    background-color: #62b8dada;
+  }
+}
+
+.car_field {
+  border-bottom: 2px dotted white;
+  &-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    button {
+      @include btn_blue;
+      margin-right: 10px;
+    }
+    div {
+      font-size: 18px;
+      color: rgb(255, 198, 124);
+    }
+  }
+  &-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    button {
+      margin-right: 5px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid grey;
+      color: grey;
+      background-color: black;
+      cursor: pointer;
+      &.active {
+        border: 1px solid rgb(86, 221, 59);
+        color: rgb(86, 221, 59);
+        font-weight: 500;
+      }
+    }
+  }
+  &-img-car {
+    align-self: flex-end;
+  }
+  &-img-flag {
+    align-self: flex-end;
+    margin: 0 200px 0 auto;
+  }
+}
