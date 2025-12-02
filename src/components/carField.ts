@@ -1,15 +1,18 @@
 import { ICar } from "../types/types";
+import movingCar from "../services/movingCar";
 
 export function carField(car: ICar) {
-  const field = `<div class="car_field">
+  const field = document.createElement("div");
+  field.classList.add("car_field");
+  field.innerHTML = `
             <div class="car_field-btns">
               <button>Select</button>
               <button>Remove</button>
               <div>${car.name}</div>
             </div>
             <div class="car_field-controls">
-              <button class="active">A</button>
-              <button>B</button>
+              <button class="start active">A</button>
+              <button class="stop">B</button>
                <svg
                 class="car_field-img-car"
                 fill="${car.color}"
@@ -27,7 +30,17 @@ export function carField(car: ICar) {
               </svg>
               <img class="car_field-img-flag" src="./assets/flag.svg" alt="flag" />
             </div>
-          </div>
-        </div>`;
+          </div>`;
+
+  const startBtn = field.querySelector(".start") as HTMLButtonElement;
+  const carImg = field.querySelector(".start ~ .car_field-img-car");
+  const roadLenth = document.body.clientWidth - 40;
+
+  console.log(roadLenth);
+  startBtn?.addEventListener("click", () => {
+    startBtn.disabled = true;
+    const speed = 68;
+    requestAnimationFrame(movingCar);
+  });
   return field;
 }
